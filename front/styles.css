@@ -16,6 +16,11 @@ header{
     overflow: hidden;
     font-family: sans-serif;
     font-style: oblique;
+    transition: .3s;
+}
+
+.Tpagina:hover{
+    color:  rgb(40, 40, 45);
 }
 
 nav {
@@ -40,6 +45,13 @@ nav ul li a {
     color: white;
     text-decoration: none;
     overflow: hidden;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color:  rgb(40, 40, 45);
+    transform: scale(1.07);
+    
 }
 
 body {
