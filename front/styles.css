@@ -7,20 +7,27 @@ header{
 }
 
 .Tpagina {
-    color: rgb(255, 255, 255);
     position: relative;
     width: 25%;
-    font-size: 2em;
-    margin-left: .5em;
-    margin-top: .4em;
     overflow: hidden;
+}
+
+.Tpagina h1{
+    display: inline;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    margin: .4em 0 0 .4em;
+    font-size: 2em;
     font-family: sans-serif;
     font-style: oblique;
     transition: .3s;
+    line-height: normal;
+
 }
 
-.Tpagina:hover{
+.Tpagina h1:hover{
     color:  rgb(40, 40, 45);
+    cursor:default;
 }
 
 nav {
@@ -31,7 +38,9 @@ nav {
 nav ul {
     display: flex;
     justify-content: start;
-    margin-top: 1.5em;
+    margin: 1.5em 0 0 0;
+    padding: 0;
+    line-height: normal;
 }
 
 nav ul li {
@@ -46,6 +55,7 @@ nav ul li a {
     text-decoration: none;
     overflow: hidden;
     transition: .3s;
+    font-family: sans-serif;
 }
 
 nav ul li a:hover {
@@ -69,10 +79,30 @@ body {
     justify-content: space-evenly;
 }
 
-.tarjeta_pelicula{
+.tarjeta_pelicula1{
     position: relative;
     overflow: hidden;
     background-image: url(assets/rick-morty-season-7_bj44.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    height: 400px;
+    width: 300px;
+    transition: .2s;
+    box-shadow: 0px 0px 10px 2px black;
+    
+}
+
+.tarjeta_pelicula1:hover{
+    box-shadow: 0px 0px 20px 2px black;
+    border-radius: 6%;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.tarjeta_pelicula{
+    position: relative;
+    overflow: hidden;
+    background-color: aliceblue;
     background-size: cover;
     color: rgb(255, 255, 255);
     height: 400px;
@@ -108,6 +138,10 @@ body {
 
 
 .tarjeta_pelicula:hover .infoT{
+    opacity: 1;
+}
+
+.tarjeta_pelicula1:hover .infoT{
     opacity: 1;
 }
 
@@ -149,4 +183,27 @@ body {
     font-size: 15px;
     cursor: pointer;
     right: 4em;
+}
+
+
+#seccion {
+    margin-top: 4em;
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+}
+
+#cuerpo {
+    background-image: url(/PM2-juank132/front/assets/fanart-1-1024x576.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+#sing {
+    position: absolute;
+    right: 3.5em;
+    top: .9em;
+    border: none;
+   
 }
