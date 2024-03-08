@@ -1,8 +1,4 @@
-
-console.log(tempData);
-
-const tarjetas = document.querySelectorAll('.tarjeta_pelicula')
-
+const tarjetas = require("./Variables")
 
 $.get(`https://students-api.2.us-1.fl0.io/movies`, (data) => {
   
@@ -16,14 +12,14 @@ $.get(`https://students-api.2.us-1.fl0.io/movies`, (data) => {
         tar.querySelector('.year').append(e.year) ;
         tar.querySelector('.genre').append( e.genre); 
         tar.querySelector('.duration').append(e.duration);
+    };
 
-    }
 
-    
   tarjetas.forEach(iterarImagen);
 
-
 })
+
+
 
 
     
