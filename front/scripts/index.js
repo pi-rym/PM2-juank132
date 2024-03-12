@@ -1,6 +1,6 @@
 const tarjetas = require("./Variables")
 
-$.get(`https://students-api.2.us-1.fl0.io/movies`, (data) => {
+$.get(`https://students-api.up.railway.app/movies`, (data) => {
   
   function iterarImagen(tar,i) {
         const e = data[i];
@@ -17,7 +17,7 @@ $.get(`https://students-api.2.us-1.fl0.io/movies`, (data) => {
 
   tarjetas.forEach(iterarImagen);
 
-})
+});
 
 
 
