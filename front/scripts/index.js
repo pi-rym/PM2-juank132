@@ -1,9 +1,14 @@
-const tarjetas = require("./Variables")
+const tarjetas = require("./variables")
 
-$.get(`https://students-api.up.railway.app/movies`, (data) => {
-  
+const axios = require("axios")
+const promesa = axios.get(`https://students-api.up.railway.app/movies`);
+
+
+promesa
+.then((res) => {
+
   function iterarImagen(tar,i) {
-        const e = data[i];
+        const e = res.data[i];
   
         tar.style.backgroundImage = `url('${e.poster}')`;
         tar.querySelector('.title').append(e.title);
@@ -12,12 +17,23 @@ $.get(`https://students-api.up.railway.app/movies`, (data) => {
         tar.querySelector('.year').append(e.year) ;
         tar.querySelector('.genre').append( e.genre); 
         tar.querySelector('.duration').append(e.duration);
-    };
-
-
+  };
+  
   tarjetas.forEach(iterarImagen);
+})
 
-});
+.catch((err) =>{
+    console.log(err);
+  })
+
+
+
+  
+
+
+
+
+
 
 
 

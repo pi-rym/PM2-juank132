@@ -6,11 +6,13 @@ header{
 
 }
 
+
 .Tpagina {
     position: relative;
     width: 25%;
     overflow: hidden;
 }
+
 
 .Tpagina h1{
     display: inline;
@@ -25,15 +27,18 @@ header{
 
 }
 
+
 .Tpagina h1:hover{
     color:  rgb(40, 40, 45);
     cursor:default;
 }
 
+
 nav {
     position: relative;
     width: 75%;
 }
+
 
 nav ul {
     display: flex;
@@ -43,11 +48,13 @@ nav ul {
     line-height: normal;
 }
 
+
 nav ul li {
     font-style: none;
     margin-right: 2em;
     font-size: 1.2em;
 }
+
 
 nav ul li a {
     display: inline-block;
@@ -58,11 +65,13 @@ nav ul li a {
     font-family: sans-serif;
 }
 
+
 nav ul li a:hover {
     color:  rgb(40, 40, 45);
     transform: scale(1.07);
     
 }
+
 
 body {
     background: rgb(40, 40, 45);
@@ -79,6 +88,7 @@ body {
     justify-content: space-evenly;
 }
 
+
 .tarjeta_pelicula1{
     position: relative;
     overflow: hidden;
@@ -92,12 +102,14 @@ body {
     
 }
 
+
 .tarjeta_pelicula1:hover{
     box-shadow: 0px 0px 20px 2px black;
     border-radius: 6%;
     transform: scale(1.1);
     cursor: pointer;
 }
+
 
 .tarjeta_pelicula{
     position: relative;
@@ -111,6 +123,7 @@ body {
     box-shadow: 0px 0px 10px 2px black;
     
 }
+
 
 .tarjeta_pelicula:hover{
     box-shadow: 0px 0px 20px 2px black;
@@ -141,6 +154,7 @@ body {
     opacity: 1;
 }
 
+
 .tarjeta_pelicula1:hover .infoT{
     opacity: 1;
 }
@@ -160,6 +174,7 @@ body {
     cursor: pointer;
 }
 
+
 .infoT .rate{
     margin-bottom:.5em;
     padding: .5em;
@@ -168,11 +183,13 @@ body {
     cursor: pointer;
 }
 
+
 .infoT .year{
     font-size: 1em;
     margin-bottom:.5em;
     cursor: pointer;
 }
+
 
 .infoT .genre{
     font-size: 1em;
@@ -197,11 +214,13 @@ body {
 
 }
 
+
 #cuerpo {
     background-image: url(../assets/fanart-1-1024x576.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
+
 
 #sing {
     position: absolute;
