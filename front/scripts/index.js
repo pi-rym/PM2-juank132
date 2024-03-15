@@ -1,10 +1,10 @@
 const tarjetas = require("./variables")
-
 const axios = require("axios")
 const promesa = axios.get(`https://students-api.up.railway.app/movies`);
 
 
 promesa
+
 .then((res) => {
 
   function iterarImagen(tar,i) {
