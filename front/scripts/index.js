@@ -1,6 +1,6 @@
 const tarjetas = require("./variables")
 const axios = require("axios")
-const promesa = axios.get(`https://students-api.up.railway.app/movies`);
+const promesa = axios.get(`http://localhost:3001/movies`);
 
 
 promesa
