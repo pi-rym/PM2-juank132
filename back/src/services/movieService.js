@@ -3,12 +3,15 @@ const axios = require("axios");
 const Movie = require("../models/movie")
 
 
-    
- 
 
 module.exports = {
-        getMovies: async () => {
+        getMoviesService: async () => {
         const movie = await Movie.find();
+        return movie;
+        },
+
+        addMoviesservice: async (movi) => {
+        const movie = await Movie.create(movi);
         return movie;
         }
 }
