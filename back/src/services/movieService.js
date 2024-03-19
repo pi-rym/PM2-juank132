@@ -1,16 +1,17 @@
 const axios = require("axios");
-const promesa = axios.get(`https://students-api.up.railway.app/movies`);
+// const promesa = axios.get(`https://students-api.up.railway.app/movies`);
+const Movie = require("../models/movie")
 
-const ejec = promesa.then((res) => {
-         return res.data
-        }).catch((err) => {
-         return err
-        })
 
     
  
 
-module.exports = ejec;
+module.exports = {
+        getMovies: async () => {
+        const movie = await Movie.find();
+        return movie;
+        }
+}
 
        
 
