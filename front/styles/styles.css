@@ -2,14 +2,14 @@ header{
     height: 4em;
     display: flex;
     justify-content: start;
-    background-color: rgb(143, 90, 58);
+    background-color: rgb(86, 96, 160);
 
 }
 
 
 .Tpagina {
     position: relative;
-    width: 25%;
+    width: 30%;
     overflow: hidden;
 }
 
@@ -19,11 +19,13 @@ header{
     position: absolute;
     color: rgb(255, 255, 255);
     margin: .4em 0 0 .4em;
-    font-size: 2em;
-    font-family: sans-serif;
+    font-size: 2em ;
+    font-family:Impact;
     font-style: oblique;
     transition: .3s;
     line-height: normal;
+    z-index: 5;
+    margin-left: 2.7em;
 
 }
 
@@ -33,10 +35,25 @@ header{
     cursor:default;
 }
 
+.logoimg{
+    display: flex;
+    position: relative;
+    height: 4em;
+    background-size: cover;
+}
+
+.logoimg img{
+    position: absolute;
+    margin-top: .3em;
+    width: 10em;
+    height: 3.5em;
+    left: -1.7em
+}
+
 
 nav {
     position: relative;
-    width: 75%;
+    width: 70%;
 }
 
 
@@ -74,7 +91,7 @@ nav ul li a:hover {
 
 
 body {
-    background: rgb(40, 40, 45);
+    background: rgb(2, 2, 30);
     color: white;
     font-size: 1em;
 }
@@ -228,5 +245,108 @@ body {
     top: .8em;
     border: none;
     overflow: hidden;
+    
    
+}
+
+#caja {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+
+}
+
+#agregarp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+
+}
+
+#agregarp input {
+    width: 30em;
+    margin: 1em;
+    display: block;
+    transition: .3s;
+}
+
+input:hover{
+    transform: scale(1.1);
+}
+
+#cajabo {
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#agregarp button {
+    display: inline;
+    position: absolute;
+    margin-top: 1em;
+    border-radius: 10%;
+    background-color:  rgb(25, 24, 24);
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+#unic {
+    left: 25em;
+    padding-right: 1.5em;
+    padding-left:1.5em;
+}
+
+#unic1 {
+    left: 18em;
+    padding-right: 1em;
+    padding-left:1em;
+}
+
+
+
+#agregarp textarea{
+    resize: none;
+    height: 1.8em;
+    width: 11.85em;
+    margin-left: 1em;
+    overflow: hidden;
+    width: 30em;
+    transition: .3s;
+}
+
+textarea:hover{
+    transform: scale(1.1);
+}
+
+button h4{
+    color: white;
+    position: relative;
+    font-size: 1em;
+    padding: 0;
+    margin-top: .5em;
+    left: 2em;
+
+}
+
+legend {
+
+    display: flex;
+    justify-content: center;
+    margin-top: .5em;
+    padding: .5em;
+    transition: .3s;
+}
+
+legend h1 {
+    padding: .4em;
+    background-color: rgb(86, 96, 160);
+    border-radius: 2%;
+}
+
+
+legend:hover {
+    transform: scale(1.1);
 }
