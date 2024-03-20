@@ -8,7 +8,7 @@ const moviesRouter = Router();
 
 moviesRouter.get("/", moviesController.appMovies);
 
-moviesRouter.post('/movies', moviesController.postMovies);
+moviesRouter.post('/', moviesController.postMovies);
   
 
 

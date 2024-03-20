@@ -1,7 +1,10 @@
 module.exports = {
-    entry: "./scripts/index.js",
+    entry: {
+        index: "./scripts/index.js",
+        form: "./scripts/formulario.js"},
     output:{
-        path: __dirname + "/public",
-        filename: "juank.js"
+        filename: "[name].js",
+        path: __dirname + "/public"
+        
     },
 };
