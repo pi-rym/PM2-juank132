@@ -25,7 +25,30 @@ promesa
 
 .catch((err) =>{
     console.log(err);
-  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

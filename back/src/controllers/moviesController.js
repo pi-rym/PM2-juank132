@@ -1,4 +1,4 @@
-const moviesService = require("../services/movieService")
+const moviesService = require("../services/movieService");
 
 module.exports = {
     appMovies: async(req, res) => {
@@ -14,10 +14,10 @@ module.exports = {
     },
 
     postMovies: async (req, res) => {
-        const {title, year, director, duration, genre, rate, poster} = req.body;
+        const {title, year, director, duration, genre, rate, poster} = req.data;
         try {
-            await moviesService.addMoviesservice({title, year, director, duration, genre, rate, poster})
-            res.status(202).json("Pelicula creada")
+            await moviesService.addMoviesService({title, year, director, duration, genre, rate, poster});
+            res.status(202).json("Pelicula creada");
 
         } catch (error) {
             res.status(500).json({

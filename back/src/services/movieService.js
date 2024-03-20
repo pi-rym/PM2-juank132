@@ -1,6 +1,6 @@
 const axios = require("axios");
 // const promesa = axios.get(`https://students-api.up.railway.app/movies`);
-const Movie = require("../models/movie")
+const Movie = require("../models/movie");
 
 
 
@@ -10,7 +10,7 @@ module.exports = {
         return movie;
         },
 
-        addMoviesservice: async (movi) => {
+        addMoviesService: async (movi) => {
         const movie = await Movie.create(movi);
         return movie;
         }

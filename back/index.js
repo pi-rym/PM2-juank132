@@ -8,6 +8,6 @@ conDb().then((res) => {
     })
 })
 .catch((err) => {
-    console.log("Error al conectar la BDD");
+    console.log("Error al conectar la BDD ", err.message);
 })
 
