@@ -16,7 +16,7 @@ promes
     let html = ''
     for (let i = 3; i < res.data.length; i++) {
       const {title,year,director,duration,genre,rate,poster} = res.data[i]
-      
+
       html += `
       <div class="tarjeta_pelicula1"  style="background-image: url('${poster}')">
 
@@ -52,6 +52,10 @@ promes
 const limpiarIn = (event) => {
   event.preventDefault();
 
+  const genreCheckboxes = document.querySelectorAll('input[name="genrec"]:checked');
+
+  genreCheckboxes.forEach( box => {box.checked = false})
+
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].value = '';
   }
@@ -62,21 +66,27 @@ const limpiarIn = (event) => {
 const handleSubmit = async (event) => {
     event.preventDefault();
     
+
+    const genreCheckboxes = document.querySelectorAll('input[name="genrec"]:checked');
+
     const Ititle = document.querySelector('.Title');
     const Iyear = document.querySelector('.Year');
     const Idirector = document.querySelector('.Director');
     const Iduration = document.querySelector('.Duration');
-    const Igenre = document.querySelector('.Genre');
+    const Igenre = [];
     const Iurl = document.querySelector('.Urldeimagen');
     const Irate = document.querySelector('.Rate');
     
-
+    
+    genreCheckboxes.forEach((checkbox) => {
+      Igenre.push(checkbox.value);
+    });
 
     const title = Ititle.value ;
     const year = Iyear.value ;
     const director = Idirector.value ;
     const duration = Iduration.value ;
-    const genre = Igenre.value ;
+    const genre = Igenre ;
     const rate = Irate.value ;
     const poster = Iurl.value ;
   
@@ -87,7 +97,7 @@ const handleSubmit = async (event) => {
     }
 
     const newMovie = {title,year,director,duration,genre,rate,poster}
-    
+
     try {
      
       await axios.post('http://localhost:3001/movies',newMovie)
