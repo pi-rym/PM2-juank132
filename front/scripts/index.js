@@ -8,6 +8,8 @@ promesa
 
 .then((res) => {
 
+  console.log(res.data)
+
   function iterarImagen(tar,i) {
         const e = res.data[i];
   
@@ -29,38 +31,6 @@ promesa
 
 
 
+module.exports = promesa;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-    
 

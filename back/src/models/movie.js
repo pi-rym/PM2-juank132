@@ -20,7 +20,7 @@ const movieSchema = new mongoose.Schema({
 
     genre: Array,
 
-    rate: {type: Number,
+    rate: {type: String,
            max:10},
 
     poster: String

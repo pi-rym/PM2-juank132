@@ -2,45 +2,51 @@ const formulario = document.querySelector("#agregarp");
 const inputs = document.getElementsByTagName('input');
 const limpiar = document.getElementById('unic1');
 const axios = require("axios");
+const promes = require("./index");
 
 
-const crearHtml = (obj) => {
-  const {title,director,rate,year,genre,duration,poster} = obj;
+promes
 
-    const tituloTar = document.createElement('h2').classList.add('title');
-    tituloTar.textContent = title;
+.then((res) => {
   
-    const directorTar = document.createElement('p').classList.add('director');
-    directorTar.textContent = director;
-
-    const rateTar = document.createElement('h5').classList.add('rate');
-    rateTar.textContent = rate;
-
-    const yearTar = document.createElement('h3').classList.add('year');
-    yearTar.textContent = year;
+  
+  
+  const createHtml = () => {
     
-    const genreTar = document.createElement('h4').classList.add('genre');
-    genreTar.textContent = genre;
+    let html = ''
+    for (let i = 3; i < res.data.length; i++) {
+      const {title,year,director,duration,genre,rate,poster} = res.data[i]
+      
+      html += `
+      <div class="tarjeta_pelicula1"  style="background-image: url('${poster}')">
 
-    const durationTar = document.createElement('hp').classList.add('duration');
-    durationTar.textContent = duration;
+            <div class="infoT">
+
+              <h2 class="title">${title}</h2>
+                <p class="director">${director}</p>
+                <h5 class="rate">${rate}</h5>
+                <h3 class="year">${year}</h3>
+                <h4 class="genre">${genre}</h4>
+                <p class="duration">${duration}</p>
+
+            </div>
+
+          </div> `;
+        
+        }
+        
+        document.querySelector('.contenedor_peliculas1').innerHTML = html
+        
+      }
+      
+    createHtml()
+    })
     
-    const posterTar = style.backgroundImage = `url('${poster}')`;
-    posterTar.textContent = poster;
-
-
-    const movie = document.createElement('div').className.add('tarjeta_pelicula');
-    const info = document.createElement('div').className.add('infoT');
-
-    movie.appendChild(info);
-    info.appendChild(title);
-    info.appendChild(director);
-    info.appendChild(rate);
-    info.appendChild(year);
-    info.appendChild(genre);
-    info.appendChild(duration);
-    info.appendChild(poster);
-}
+    
+    .catch((err) =>{
+      console.log(err);
+    })
+    
 
 
 const limpiarIn = (event) => {
@@ -96,4 +102,10 @@ const handleSubmit = async (event) => {
 limpiar.addEventListener("click", limpiarIn);
 
 formulario.addEventListener('submit', handleSubmit);
+
+
+
+
+
+
 
